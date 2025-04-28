@@ -4,6 +4,10 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing import image
 import numpy as np
 
+port = int(os.environ.get("PORT", 5000))
+app.run(host='0.0.0.0', port=port)
+
+
 app = Flask(__name__)
 UPLOAD_FOLDER = 'static/uploads/'
 app.config['UPLOAD_FOLDER'] = UPLOAD_FOLDER
